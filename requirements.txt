@@ -1,0 +1,27 @@
+# PyTorch is not pinned here -- install the build matching your CUDA driver first, e.g. (Windows, CUDA 12.6):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+numpy
+numba
+h5py
+hdf5plugin
+tqdm
+imageio
+opencv-python
+pyyaml
+wandb
+coloredlogs
+scikit-image
+scikit-video
+matplotlib
+flow_vis
+
+# Online Metric3D depth (--depth_source online), optional: only needed if you use that path.
+# TensorRT itself (for the FP16 execution provider) is a separate NVIDIA SDK install -- see
+# metric3d_online/README.md. Without it, OnlineDepthEngine falls back to the CUDA provider.
+onnxruntime-gpu
+
+# Local Metric3D depth generation (generate_metric3d_depth.py), optional: only needed to run
+# Metric3D natively in PyTorch against a metric3d checkout + checkpoint. mmcv is deliberately
+# not listed -- metric3d_online.TorchDepthEngine stubs its one dead import, see torch_engine.py.
+mmengine
+timm

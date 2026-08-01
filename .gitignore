@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.mypy_cache/
+.pytest_cache/
+
+# Editor
+.vscode/
+
+# Data
+/datasets
+
+# Checkpoints / weights
+*.pth
+/ckpts
+/weights
+
+# wandb logs
+wandb
